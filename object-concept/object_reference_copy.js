@@ -70,3 +70,20 @@ console.log(copiedAssignmentObject, "<== Copied Assignment Object ==>");
 console.log(newOneAssign, "<== Copied newOneAssign Object ==>");
 
 /* Nested cloning */
+
+let user2 = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50,
+  },
+};
+
+let user3 = structuredClone(user2);
+console.log(user3);
+
+/* note :> structuredClone fails if there is function associated with object 
+for that we can use custom one or 
+let c = json.stringify(obj)
+let d = json.parse(c)
+*/
